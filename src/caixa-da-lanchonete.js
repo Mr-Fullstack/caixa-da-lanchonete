@@ -1,4 +1,5 @@
 import { formatarMoedaParaBRL } from "./helpers/numeros";
+import { valorDoPagamentoComCartaoDeCredito, valorDoPagamentoEmDinheiro } from "./helpers/pagamento";
 import { cardapio } from "./repository/cardapio-repositorio";
 
 class CaixaDaLanchonete {
@@ -20,7 +21,6 @@ class CaixaDaLanchonete {
 			let resultado = itemsExtras.every(produto => todosOsProdutosPrincipais.includes(produto))
 			return resultado;
 		}
-
 		return true;
 	}
 
@@ -46,9 +46,9 @@ class CaixaDaLanchonete {
 	cacularAsTaxasEDescontos(metodoDePagamento, subTotal) {
 		switch (metodoDePagamento) {
 			case 'dinheiro':
-				return (subTotal - ( subTotal * 0.05 )).toFixed(2);
+				return valorDoPagamentoEmDinheiro(subTotal)
 			case 'credito':
-				return (subTotal + (subTotal * 0.03) ).toFixed(2);
+				return valorDoPagamentoComCartaoDeCredito(subTotal);
 			default:
 				return subTotal;
 		}
@@ -66,7 +66,7 @@ class CaixaDaLanchonete {
 					total:produto.preco * produto.quantidade
 		    }) 
 		});
-		
+
 		const itemExiste = this.checarSeProdutoExiste(itensNoPedido);
 		const itemTemQuantidadeCorreta =  this.checarQuantidadesDeCadaProduto(itensNoPedido);
 		const tudoCertoComItemsExtra = this.checarItensExtra(itensNoPedido);
