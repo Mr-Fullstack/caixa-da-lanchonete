@@ -27,7 +27,6 @@ O sistema deve receber essa informação como string, utilizando a grafia exatam
  - Pagamento a crédito tem acréscimo de 3% no valor total
 
 ### REGRAS
-
 - Caso item extra seja informado num pedido que não tenha o respectivo item principal, apresentar mensagem "Item extra não pode ser pedido sem o principal".
 - Combos não são considerados como item principal.
 - É possível pedir mais de um item extra sem precisar de mais de um principal.
@@ -44,7 +43,7 @@ npm install
 ```
 
 ### VALIDANDO A SOLUÇÃO
-o projeto já alguns cenários de testes para auxiliar na validação da sua solução. você  pode criar mais casos de teste para aumentar a confiabilidade de sua implementação.
+o projeto já contém alguns cenários de testes para auxiliar na validação da sua solução. você  pode criar mais casos de teste para aumentar a confiabilidade de sua implementação.
 Para testar sua solução com os cenários já criados, basta rodar o seguinte comando:
 ```bash
 npm test
