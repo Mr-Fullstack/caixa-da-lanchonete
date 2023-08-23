@@ -49,7 +49,9 @@ Para testar sua solução com os cenários já criados, basta rodar o seguinte c
 ```bash
 npm test
 ```
-
 Para saber mais consulte a [Documentação do Jest](https://jestjs.io/pt-BR/docs/getting-started).
 
-```
+
+### IMAGENS
+![imagem 01 do projeto](./000.jpg)
+![imagem 02 do projeto](./001.jpg)
