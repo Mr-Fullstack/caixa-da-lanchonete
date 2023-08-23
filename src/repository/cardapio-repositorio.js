@@ -4,7 +4,8 @@ class RepositorioCardapio {
 
 	#cardapio = [];
 
-	constructor() {
+	constructor() 
+	{
 		this.#cardapio = todosProdutos;
 	}
 

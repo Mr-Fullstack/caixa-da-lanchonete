@@ -1,5 +1,5 @@
 # CAIXA DA LANCHONETE
-Projeto densenvolvido para desafio técnico,  implementar um sistema de caixa registradora. utilizando alguns padrões como repository e "S" de SOLID
+Projeto densenvolvido para desafio técnico,  implementar um sistema de caixa registradora. utilizei de alguns padrões de projetos, Repository e "S" de SOLID
 ### CARDÁPIO
 
   | codigo    | descrição                   | valor   |
